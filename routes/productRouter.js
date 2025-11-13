@@ -1,14 +1,11 @@
 import express from "express";
+import findProduct from "../controller/productController.js";
 const router = express.Router();
 
 
 
-router.get("/find", (req,res)=>{
-    res.status(201).json({
-      success: true,
-      message: "find successfully",
-    });
-    
-})
+
+
+router.get("/find", findProduct)
 
 export default router
