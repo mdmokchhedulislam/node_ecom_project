@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from 'mongoose';
 const DataSchema=mongoose.Schema({
         img1:{type:String,required:true},
         img2:{type:String,required:true},
@@ -19,4 +19,4 @@ const DataSchema=mongoose.Schema({
     {timestamps:true,versionKey:false}
 )
 const ProductDetailsModel=mongoose.model('productdetails',DataSchema)
-module.exports=ProductDetailsModel
+export default ProductDetailsModel

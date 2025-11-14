@@ -1,7 +1,8 @@
-const FeaturesModel = require("../models/FeaturesModel");
-const LegalModel = require("../models/LegalModel");
+import { FeaturesModel } from "../models/FeaturesModel.js";
 
-const FeaturesListService = async () => {
+import { LegalModel } from "../models/LegalModel.js";
+
+export const FeaturesListService = async () => {
     try {
         let data= await FeaturesModel.find();
         return {status:"success",data:data}
@@ -13,7 +14,7 @@ const FeaturesListService = async () => {
 
 
 
-const LegalDetailsService = async (req) => {
+export const LegalDetailsService = async (req) => {
     try {
         let type=req.params.type
         let data= await LegalModel.find({type:type});
@@ -25,7 +26,7 @@ const LegalDetailsService = async (req) => {
 }
 
 
-module.exports={
-    LegalDetailsService,
-    FeaturesListService
-}
+// module.exports={
+//     LegalDetailsService,
+//     FeaturesListService
+// }

@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from "mongoose"
 const DataSchema=mongoose.Schema({
         userID:{type:mongoose.Schema.Types.ObjectId,required:true},
         cus_add:{type:String},
@@ -20,4 +20,4 @@ const DataSchema=mongoose.Schema({
     {timestamps:true,versionKey:false}
 )
 const ProfileModel=mongoose.model('profiles',DataSchema)
-module.exports=ProfileModel
+export default ProfileModel

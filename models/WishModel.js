@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from "mongoose"
 const DataSchema=mongoose.Schema({
         productID:{type:mongoose.Schema.Types.ObjectId,required:true},
         userID:{type:mongoose.Schema.Types.ObjectId,required:true},
@@ -6,4 +6,4 @@ const DataSchema=mongoose.Schema({
     {timestamps:true,versionKey:false}
 )
 const WishModel=mongoose.model('wishes',DataSchema)
-module.exports=WishModel
+export default WishModel

@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from 'mongoose';
 const DataSchema=mongoose.Schema({
         name:{type:String,required:true},
         description:{type:String,required:true},
@@ -6,7 +6,7 @@ const DataSchema=mongoose.Schema({
     },
     {timestamps:true,versionKey:false}
 )
-const FeaturesModel=mongoose.model('features',DataSchema)
-module.exports=FeaturesModel
+export const FeaturesModel=mongoose.model('features',DataSchema)
+
 
 

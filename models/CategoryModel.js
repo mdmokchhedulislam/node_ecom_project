@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from 'mongoose';
 const DataSchema=mongoose.Schema({
         categoryName:{type:String,unique:true,required:true},
         categoryImg:{type:String,required:true}
@@ -6,4 +6,4 @@ const DataSchema=mongoose.Schema({
     {timestamps:true,versionKey:false}
 )
 const CategoryModel=mongoose.model('categories',DataSchema)
-module.exports=CategoryModel
+export default CategoryModel

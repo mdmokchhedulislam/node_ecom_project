@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from 'mongoose';
 const DataSchema=mongoose.Schema({
 
         title:{type:String,required:true},
@@ -12,4 +12,4 @@ const DataSchema=mongoose.Schema({
     {timestamps:true,versionKey:false}
 )
 const ProductSliderModel=mongoose.model('productsliders',DataSchema)
-module.exports=ProductSliderModel
+export default ProductSliderModel

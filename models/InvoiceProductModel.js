@@ -1,4 +1,4 @@
-const mongoose=require('mongoose');
+import mongoose from "mongoose"
 const DataSchema=mongoose.Schema({
         userID:{type:mongoose.Schema.Types.ObjectId,required:true},
         productID:{type:mongoose.Schema.Types.ObjectId,required:true},
@@ -11,4 +11,4 @@ const DataSchema=mongoose.Schema({
     {timestamps:true,versionKey:false}
 )
 const InvoiceProductModel=mongoose.model('invoiceproducts',DataSchema)
-module.exports=InvoiceProductModel
+export default InvoiceProductModel

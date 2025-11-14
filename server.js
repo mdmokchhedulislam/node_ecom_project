@@ -1,6 +1,6 @@
 import express from 'express'
 
-import productRouter from './routes/productRouter.js';
+import productRouter from "./routes/apis.js"
 import cors from "cors"
 import helmet from 'helmet';
 import ratelimit from 'express-rate-limit';
